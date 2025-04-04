@@ -1,48 +1,21 @@
-import java.util.Scanner;
+class Main {
 
-public class Main{
+     public static void main(String[] args){
 
-	public static void main(String[] args){
-		
-		int op = 0;
-		Scanner scan = new Scanner(System.in);
-		int saldo = 0;
-		int saque =0;
-		
-		
-		do{
-	    	System.out.println("Selecione a opçõe:");
-    		System.out.println("1 - Ver saldo");
-    		System.out.println("2 - Depósito");
-    		System.out.println("3 - Saque");
-    		System.out.println("0 - Sair");
-    		op = scan.nextInt();
-    		
-    		switch(op){
-    		    case 1:
-    		        System.out.printf("\n saldo:" + saldo + "\n");
-    		        break;
-    		        
-    		    case 2:
-    		        System.out.println("Digite o valor que deseja depositar:");
-    		        saldo = scan.nextInt();
-    		        break;
-    		   
-    		    case 3:
-    		        System.out.println("Digite o valor que deseja sacar:");
-    		        saque = scan.nextInt();
-    		        
-    		        saldo = saldo - saque;
-    		       
-    		        System.out.println("Saldo: " + saldo);
-    		        
-    		        break;
-    		}
-    		
-		}while(op != 0 );
-		
-		scan.close();
+        
+        Aluno alunoInstancia = new Aluno();
+        alunoInstancia.setNome("João");
+        alunoInstancia.setIdade(24);
+        alunoInstancia.setMatricula("123456");
+        alunoInstancia.setNota("A");
+        alunoInstancia.setnumeroTelefone("123456789");
 
-}
+        System.out.println(alunoInstancia.getNome());
+        System.out.println(alunoInstancia.getIdade());
+        System.out.println(alunoInstancia.getNota());
+        System.out.println(alunoInstancia.getnumeroTelefone());
+        System.out.println(alunoInstancia.getMatricula());
+     }
+
     
 }
