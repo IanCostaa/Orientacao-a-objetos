@@ -10,16 +10,15 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
 
         Diretor diretor1 = new Diretor("José", "Brasil");
-        Diretor diretor2 = new Diretor("Mohamed", "Mexico");
+        Diretor diretor2 = new Diretor("Mohamed", "México");
 
-        FilmeCinema filmeCinema1 = new FilmeCinema(diretor1, 2000, "Carros5");
+        FilmeCinema filmeCinema1 = new FilmeCinema(diretor1, 2000, "Carros 5");
         FilmeCinema filmeCinema2 = new FilmeCinema(diretor2, 1970, "Wally");
 
         FilmeStreaming filmeStreaming1 = new FilmeStreaming(new Diretor("Ana", "Argentina"), 2020, "Digital 1", "Netflix");
         FilmeStreaming filmeStreaming2 = new FilmeStreaming(new Diretor("Carlos", "Chile"), 2022, "Digital 2", "Amazon");
 
         ArrayList<Filme> colecaoFilme = new ArrayList<>();
-
         colecaoFilme.add(filmeCinema1);
         colecaoFilme.add(filmeCinema2);
         colecaoFilme.add(filmeStreaming1);
@@ -27,9 +26,10 @@ public class Main {
 
         while (true) {
             exibirOpcoes();
+
             System.out.print("Escolha uma opção: ");
             int opcao = scanner.nextInt();
-            scanner.nextLine(); // limpar o buffer
+            scanner.nextLine(); // Limpa o buffer
 
             switch (opcao) {
                 case 1:
@@ -37,9 +37,11 @@ public class Main {
                     String nomeBusca = scanner.nextLine();
                     filtrarPorDiretor(colecaoFilme, nomeBusca);
                     break;
+
                 case 0:
-                    System.out.println("Encerrando programa...");
+                    System.out.println("Encerrando o programa.");
                     return;
+
                 default:
                     System.out.println("Opção inválida.");
             }
@@ -64,7 +66,8 @@ public class Main {
 
     public static void exibirOpcoes() {
         System.out.println("------------------------------------------------------");
-        System.out.println("1- Buscar filme por diretor");
-        System.out.println("0- Sair");
+        System.out.println("1 - Buscar filme por diretor");
+        System.out.println("0 - Sair");
+        System.out.println("------------------------------------------------------");
     }
 }
